@@ -25,11 +25,11 @@ import footer from '../components/footer/footer.component';
 import main from './main/main.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
-
+import ngMap from 'ngmap';
 import './app.css';
 
 angular.module('goflyzoneApp', [ngCookies, ngResource, ngSanitize, ngRoute, uiBootstrap, _Auth,
-  account, admin, navbar, footer, main, constants, util
+  account, admin, navbar, footer, main, constants, util, 'ngMap'
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
