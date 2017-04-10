@@ -29,7 +29,7 @@ import ngMap from 'ngmap';
 import './app.css';
 
 angular.module('goflyzoneApp', [ngCookies, ngResource, ngSanitize, ngRoute, uiBootstrap, _Auth,
-  account, admin, navbar, footer, main, constants, util, 'ngMap'
+  account, admin, navbar, footer, main, constants, util, ngMap
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
