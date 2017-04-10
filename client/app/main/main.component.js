@@ -19,6 +19,10 @@ export class MainController {
       });
   }
 
+  // NgMap(NgMap) {
+  //   NgMap.getMap().then(function() {});
+  // }
+
   addThing() {
     if(this.newThing) {
       this.$http.post('/api/things', {
