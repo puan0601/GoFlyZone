@@ -1,10 +1,10 @@
 <div map-lazy-load="https://maps.google.com/maps/api/js?key=AIzaSyAGpTipSkb8ZoTKDcIZd0bxjOEX5EzbaT0">
   <ng-map zoom="10"></ng-map>
-  <a href="#" class="fa fa-plus-circle fa-5x" type="button" id="places-button"></button></a>
+  <a href="#" class="fa fa-plus-circle fa-5x" id="places-button" ng-click="isCollapsed = !isCollapsed"></button></a>
 
   <!-- <div class="container-fluid">
     <div class="row"> -->
-      <div class="col-xs-2 col-xs-offset-8" id="places-display">
+      <div class="col-xs-2 col-xs-offset-8" id="places-display" ng-show="isCollapsed">
         <h1 class="page-header">Places:</h1>
         <ul class="nav nav-tabs nav-stacked" ng-repeat="thing in $ctrl.places">
           <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}</a></li>
