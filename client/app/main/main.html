@@ -1,5 +1,17 @@
 <div map-lazy-load="https://maps.google.com/maps/api/js?key=AIzaSyAGpTipSkb8ZoTKDcIZd0bxjOEX5EzbaT0">
   <ng-map zoom="10"></ng-map>
+  <a href="#" class="fa fa-plus-circle fa-5x" type="button" id="places-button"></button></a>
+
+  <!-- <div class="container-fluid">
+    <div class="row"> -->
+      <div class="col-xs-2 col-xs-offset-8" id="places-display">
+        <h1 class="page-header">Places:</h1>
+        <ul class="nav nav-tabs nav-stacked" ng-repeat="thing in $ctrl.places">
+          <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}</a></li>
+        </ul>
+      </div>
+    <!-- </div>
+  </div> -->
 </div>
 <!--
 <header class="hero-unit" id="banner">
@@ -9,16 +21,3 @@
     <img src="assets/images/yeoman.png" alt="I'm Yeoman">
   </div>
 </header> -->
-
-<button class="fa fa-plus-circle fa-5x" type="button" id="places-button"></button>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-1 col-md-offset-11 col-lg-1 col-md-offest-11 col-sm-1 col-md-offset-11" id="places-display">
-      <h1 class="page-header">Places:</h1>
-      <ul class="nav nav-tabs nav-stacked" ng-repeat="thing in $ctrl.places">
-        <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
