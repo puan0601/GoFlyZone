@@ -3,8 +3,16 @@
     <marker ng-repeat="place in $ctrl.places"
       position="{{place.position}}"
       data="{{place.info}}"
-      title="{{place.name}}">
+      title="{{place.name}}"
+      on-click="$ctrl.myMap.showCustomMarker()">
     </marker>
+    <custom-marker id="foo" position="10 pennsylvania ave, washington DC" on-click="$ctr.myMap.closeCustomMarker()">
+      <div>
+        <p>{{place.name}}</p>
+        <p>{{place.info}}</p>
+        <p>{{place.position}}</p>
+      </div>
+    </custom-marker>
   </ng-map>
   <a href="#" class="fa fa-plus-circle fa-5x" id="places-button" ng-click="isCollapsed = !isCollapsed"></button></a>
 
