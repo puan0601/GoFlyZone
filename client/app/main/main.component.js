@@ -9,6 +9,7 @@ export class MainController {
   myMap = '';
   /*@ngInject*/
   constructor($http, NgMap) {
+    var vm = this;
     this.$http = $http;
     this.myMap = NgMap.getMap().then(function(map) {
       map.setCenter({lat: 37.7909, lng: -122.4013});
@@ -16,6 +17,15 @@ export class MainController {
       map.data.loadGeoJson('https://raw.githubusercontent.com/mapbox/drone-feedback/master/sources/geojson/5_mile_airport.geojson');
       map.data.loadGeoJson('https://raw.githubusercontent.com/mapbox/drone-feedback/master/sources/geojson/us_military.geojson');
       map.data.loadGeoJson('https://raw.githubusercontent.com/mapbox/drone-feedback/master/sources/geojson/us_national_park.geojson');
+
+      vm.showCustomMarker = function(evt) {
+        console.log()
+        map.customMarkers.foo.setVisible(true);
+        map.customMarkers.foo.setPosition(this.getPosition());
+      };
+      vm.closeCustomMarker = function(evt) {
+        this.style.display = 'none';
+      };
     });
   }
 

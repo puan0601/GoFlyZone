@@ -1,5 +1,19 @@
 <div map-lazy-load="https://maps.google.com/maps/api/js?key=AIzaSyAGpTipSkb8ZoTKDcIZd0bxjOEX5EzbaT0">
-  <ng-map zoom="10"></ng-map>
+  <ng-map>
+    <marker ng-repeat="place in $ctrl.places"
+      position="{{place.position}}"
+      data="{{place.info}}"
+      title="{{place.name}}"
+      on-click="$ctrl.constructor.showCustomMarker()">
+    </marker>
+    <custom-marker id="foo" position="160 Spear St, San Francisco, CA 94105" on-click="$ctrl.constructor.closeCustomMarker()">
+      <div>
+        <p>{{place.name}}</p>
+        <p>{{place.info}}</p>
+        <p>{{place.position}}</p>
+      </div>
+    </custom-marker>
+  </ng-map>
   <a href="#" class="fa fa-plus-circle fa-5x" id="places-button" ng-click="isCollapsed = !isCollapsed"></button></a>
 
   <!-- <div class="container-fluid">
