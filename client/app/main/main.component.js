@@ -39,18 +39,18 @@ export class MainController {
         map.customMarkers.foo.setVisible(true);
         map.customMarkers.foo.setPosition(this.getPosition());
       };
-      vm.closeCustomMarker = function(evt) {                     
+      vm.closeCustomMarker = function(evt) {
         this.style.display = 'none';
       };
     });
   }
 
-  $onInit() {
-    this.$http.get('/api/things')
-      .then(response => {
-        this.places = response.data;
-      });
-  }
+  // $onInit() {
+  //   this.$http.get('/api/things')
+  //     .then(response => {
+  //       this.places = response.data;
+  //     });
+  // }
 
   addThing() {
     if(this.newThing) {
