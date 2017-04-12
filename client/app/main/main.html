@@ -18,7 +18,7 @@
     </custom-marker>
   </ng-map>
 <!-- favicon plus button -->
-  <a href="#" class="fa fa-plus-circle fa-5x" id="places-button" ng-click="isCollapsed = !isCollapsed"></button></a>
+  <a href="#" class="fa fa-plus-circle fa-5x" id="places-button" ng-click="isCollapsed = !isCollapsed"></a>
     <!-- lists all places in db -->
     <div class="col-xs-2 col-xs-offset-8" id="places-display" ng-show="isCollapsed">
       <h3 class="page-header">Places:</h3>
@@ -27,6 +27,29 @@
         <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}</a></li>
       </ul>
       <!-- not wired yet -->
-      <a href="#" class="btn btn-primary">Add Place!</a>
+      <a href="#" id="add-place" class="btn btn-primary" ng-click="isCollapsed = !isCollapsed; isAdd = !isAdd">Add Place!</a>
+    </div>
+
+    <div class="col-xs-2 col-xs-offset-8" id="places-add" ng-show="isAdd">
+      <form class="form" name="form" ng-submit="$ctrl.addThing(form)" novalidate>
+
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" name="name" class="form-control" ng-model="$ctrl.newThing.name">
+
+          <label>Info</label>
+          <input type="text" name="info" class="form-control" ng-model="$ctrl.newThing.info">
+
+          <label>Position</label>
+          <input type="text" name="position" class="form-control" ng-model="$ctrl.newThing.position">
+        </div>
+
+        <div>
+          <input type="submit" id="submit" value="Submit" class="btn btn-primary" ng-click="isAdd = !isAdd" />
+          <input type="button" id="cancel" value="Cancel" class="btn btn-default" ng-click="isAdd = !isAdd; isCollapsed = !isCollapsed" />
+
+        </div>
+
+      </form>
     </div>
 </div>

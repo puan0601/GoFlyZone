@@ -5,6 +5,7 @@ import routing from './main.routes';
 export class MainController {
   // for places display
   isCollapsed = true;
+  isAdd = true;
   // stubbed for now because seed file wasnt working on heroku
   places = [{
     name: 'Treasure Island',
@@ -19,7 +20,7 @@ export class MainController {
     info: 'Large open space, on the water, not many obstacles.',
     position: '24th St, San Francisco, CA 94107'
   }];
-  newThing = '';
+  newThing = {name:"", info:"", position:""};
   myMap = '';
   /*@ngInject*/
   constructor($http, NgMap) {
@@ -45,20 +46,26 @@ export class MainController {
     });
   }
 
-  // $onInit() {
-  //   this.$http.get('/api/things')
-  //     .then(response => {
-  //       this.places = response.data;
-  //     });
-  // }
+  $onInit() {
+    this.$http.get('/api/things')
+      .then(response => {
+        this.places = response.data;
+      });
+  }
 
   addThing() {
-    if(this.newThing) {
+    if(this.newThing.name) {
       this.$http.post('/api/things', {
-        name: this.newThing
+        name: this.newThing.name,
+        info: this.newThing.info,
+        position: this.newThing.position
       });
       this.newThing = '';
     }
+    this.$http.get('/api/things')
+    .then(response => {
+      this.places = response.data;
+    });
   }
 
   deleteThing(thing) {
