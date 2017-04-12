@@ -3,7 +3,9 @@ const ngRoute = require('angular-route');
 import routing from './main.routes';
 
 export class MainController {
+  // for places display
   isCollapsed = true;
+  // stubbed for now because seed file wasnt working on heroku
   places = [{
     name: 'Treasure Island',
     info: 'Great flying, views overlook the city and bay, kind of windy.',
@@ -30,12 +32,14 @@ export class MainController {
       map.data.loadGeoJson('https://raw.githubusercontent.com/mapbox/drone-feedback/master/sources/geojson/us_military.geojson');
       map.data.loadGeoJson('https://raw.githubusercontent.com/mapbox/drone-feedback/master/sources/geojson/us_national_park.geojson');
 
+      //doesnt work right now
+      //TODO:: can't figure out how to call this from main.html tried $ctrl, vm, $ctrl prefixes.
       vm.showCustomMarker = function(evt) {
         console.log()
         map.customMarkers.foo.setVisible(true);
         map.customMarkers.foo.setPosition(this.getPosition());
       };
-      vm.closeCustomMarker = function(evt) {
+      vm.closeCustomMarker = function(evt) {                     
         this.style.display = 'none';
       };
     });
