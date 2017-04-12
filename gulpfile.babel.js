@@ -572,7 +572,7 @@ grunt.initConfig({
         },
         heroku: {
             options: {
-                remote: 'heroku',
+                remote: 'https://git.heroku.com/goflyzone.git',
                 branch: 'master'
             }
         },
