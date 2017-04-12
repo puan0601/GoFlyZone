@@ -5,7 +5,6 @@ html, body {
   padding: 0;
 }
 
-
 .navbar-text {
   margin-left: 15px;
 }
@@ -13,7 +12,7 @@ html, body {
 #places-button {
   position: absolute;
   top: 30%;
-  right: 15%;
+  right: 10%;
   z-index: 1;
   text-decoration: none;
 }
@@ -22,7 +21,7 @@ html, body {
   position: absolute;
   z-index: 2;
   top: 35%;
-  right: 20%;
+  right: 15%;
   z-index: 2;
   background: #DDDDDD;
   max-height: 65%;
