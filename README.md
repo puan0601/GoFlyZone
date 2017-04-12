@@ -1,6 +1,13 @@
-# goflyzone
+# goflyzone - best drone flying spots
 
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 4.1.4.
+Flyng drones is FUN, complying with FAA No Fly Zones is not. Find the best legal spots to fly your drone
+
+## Technologies
+- Mongo, Express, Angular 1.5, Node
+- Google Maps API
+- Passport Auth
+- Bootstrap
+- Heroku
 
 ## Getting Started
 
@@ -26,3 +33,10 @@ Run `gulp build` for building and `gulp serve` for preview.
 ## Testing
 
 Running `npm test` will run the unit tests with karma.
+
+## Project Planning
+####[Sprints](https://docs.google.com/document/d/1_qiGSRr6sR4FH8lyKskSTfNy8zSD290_GrpP6_nqxEA/edit)
+
+#### [User Stories](https://docs.google.com/document/d/1IhMSC0xPmCR24aApsd6wpQTHqoWMyXgF6xK_fTwOPng/edit)
+
+This project uses the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 4.1.4.
