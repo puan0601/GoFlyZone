@@ -17,6 +17,10 @@ html, body {
   z-index: 1;
 }
 
+#places-button:hover {
+  text-decoration: none;
+}
+
 #places-display {
   position: absolute;
   z-index: 2;
