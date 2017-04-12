@@ -4,9 +4,9 @@
       position="{{place.position}}"
       data="{{place.info}}"
       title="{{place.name}}"
-      on-click="$ctrl.myMap.showCustomMarker()">
+      on-click="$ctrl.constructor.showCustomMarker()">
     </marker>
-    <custom-marker id="foo" position="10 pennsylvania ave, washington DC" on-click="$ctr.myMap.closeCustomMarker()">
+    <custom-marker id="foo" position="160 Spear St, San Francisco, CA 94105" on-click="$ctrl.constructor.closeCustomMarker()">
       <div>
         <p>{{place.name}}</p>
         <p>{{place.info}}</p>
