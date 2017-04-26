@@ -22,7 +22,7 @@ var UserSchema = new Schema({
   },
   provider: String,
   salt: String,
-  places: [thing.schema]
+  places: [ThingSchema]
 });
 
 /**

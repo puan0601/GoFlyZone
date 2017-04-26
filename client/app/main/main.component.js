@@ -58,7 +58,8 @@ export class MainController {
       this.$http.post('/api/things', {
         name: this.newThing.name,
         info: this.newThing.info,
-        position: this.newThing.position
+        position: this.newThing.position,
+        // user: currentUser
       });
       this.newThing = '';
     }
