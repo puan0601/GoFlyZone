@@ -7,7 +7,8 @@ var ThingSchema = new mongoose.Schema({
   name: String,
   info: String,
   active: Boolean,
-  position: String
+  position: String,
+  user_id: String
 });
 
 registerEvents(ThingSchema);
